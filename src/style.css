@@ -1,19 +1,18 @@
-* {
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
+:root {
+  --blue: #00acdc;
 }
 
 body {
   background-color: gray;
   margin: 0;
+  padding: 0;
 }
 
-header {
+.header {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
   background-color: #fff;
   width: 100vw;
-  height: 60px;
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -21,6 +20,8 @@ header {
 }
 
 .nav__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -28,7 +29,7 @@ header {
 }
 
 .nav__item {
-  margin: 10px;
+  margin: 0 10px;
 }
 
 .nav__item:first-child {
@@ -59,7 +60,7 @@ header {
 
 .nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active::after {
@@ -67,7 +68,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #00acdc;
+  background-color: var(--blue);
   content: '';
   height: 4px;
   border-radius: 8px;
